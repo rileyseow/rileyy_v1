@@ -1,16 +1,16 @@
 import type { ReactNode } from "react";
-import CssSvg from "../assets/css.svg?react";
-import D3Svg from "../assets/d3.svg?react";
-import ExpressSvg from "../assets/express.svg?react";
-import HtmlSvg from "../assets/html.svg?react";
-import JavascriptSvg from "../assets/javascript.svg?react";
-import MapboxSvg from "../assets/mapbox.svg?react";
-import NodeSvg from "../assets/node.svg?react";
-import PostgreSqlSvg from "../assets/postgresql.svg?react";
-import ReactSvg from "../assets/react.svg?react";
-import ReduxSvg from "../assets/redux.svg?react";
-import ScssSvg from "../assets/scss.svg?react";
-import TypescriptSvg from "../assets/typescript.svg?react";
+import CssSvg from "../assets/Tech/css.svg?react";
+import D3Svg from "../assets/Tech/d3.svg?react";
+import ExpressSvg from "../assets/Tech/express.svg?react";
+import HtmlSvg from "../assets/Tech/html.svg?react";
+import JavascriptSvg from "../assets/Tech/javascript.svg?react";
+import MapboxSvg from "../assets/Tech/mapbox.svg?react";
+import NodeSvg from "../assets/Tech/node.svg?react";
+import PostgreSqlSvg from "../assets/Tech/postgresql.svg?react";
+import ReactSvg from "../assets/Tech/react.svg?react";
+import ReduxSvg from "../assets/Tech/redux.svg?react";
+import ScssSvg from "../assets/Tech/scss.svg?react";
+import TypescriptSvg from "../assets/Tech/typescript.svg?react";
 
 import "./Tech.scss";
 
