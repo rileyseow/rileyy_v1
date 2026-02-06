@@ -1,0 +1,35 @@
+.About {
+  padding-top: 30px;
+  font-size: 18px;
+  line-height: 1.8;
+
+  > p:first-child {
+    font-size: 30px;
+  }
+
+  > p:not(:first-child) {
+    color: var(--text-color-secondary);
+  }
+
+  p a.link {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    margin: 0 6px;
+    text-decoration: none;
+    color: var(--accent-color-primary);
+
+    &:hover {
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: 0.8;
+    }
+
+    svg {
+      width: 18px;
+      height: 18px;
+    }
+  }
+}

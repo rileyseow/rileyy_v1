@@ -1,0 +1,34 @@
+.App {
+  scroll-behavior: smooth;
+
+  .content {
+    display: grid;
+    grid-template-columns: 200px minmax(0, 1fr);
+    align-items: start;
+    row-gap: 20px;
+    background-color: color-mix(
+      in hsl,
+      var(--bg-color-secondary) 14%,
+      var(--bg-color-primary) 28%
+    );
+
+    h2 {
+      font-size: 22px;
+      font-weight: 400;
+    }
+
+    > .left {
+      grid-row: 1 / -1;
+      position: sticky;
+      top: 200px;
+      display: flex;
+      justify-content: center;
+    }
+
+    > :not(.left) {
+      grid-column: 2 / 3;
+      padding-left: 100px;
+      padding-right: 100px;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@use "palette";
+
+:root {
+  --bg-color-primary: #{palette.$white};
+  --bg-color-secondary: #{palette.$gallery};
+  --text-color-primary: #{palette.$mine-shaft};
+  --text-color-secondary: #{palette.$dove-gray};
+  --text-color-tertiary: #{palette.$silver-chalice};
+  --accent-color-primary: #{palette.$apple};
+  --font-primary: "Fira Sans", monospace;
+  --font-secondary: "Fira Mono", monospace;
+
+  font-weight: 400;
+  font-size: 16px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+[data-theme="dark"] {
+  --bg-color-primary: #{palette.$cod-gray};
+  --bg-color-secondary: #{palette.$scorpion};
+  --text-color-primary: #{palette.$seashell};
+  --text-color-secondary: #{palette.$silver};
+  --text-color-tertiary: #{palette.$silver-chalice};
+  --accent-color-primary: #{palette.$limeade};
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-primary);
+  background-color: var(--bg-color-primary);
+  color: var(--text-color-primary);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
