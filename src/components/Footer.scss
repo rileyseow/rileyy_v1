@@ -3,13 +3,9 @@
   justify-content: space-between;
   align-items: center;
   gap: 60px;
-  padding: 20px 40px;
-  box-shadow: 0px 1px 3px var(--text-color-tertiary);
-  background-color: color-mix(
-    in hsl,
-    var(--bg-color-secondary) 30%,
-    var(--bg-color-primary) 15%
-  );
+  padding: 40px 80px;
+  box-shadow: 0px 0.5px 3px var(--text-color-tertiary);
+  background-color: var(--bg-color-primary);
 
   > .text-attribution {
     display: flex;
@@ -28,9 +24,12 @@
       display: flex;
       padding: 2px 8px;
       overflow: hidden;
-      background: var(--text-color-primary);
+      background: color-mix(
+        in hsl,
+        var(--bg-color-secondary) 30%,
+        var(--text-color-primary) 5%
+      );
       font-family: var(--font-secondary);
-      color: var(--bg-color-primary);
 
       .motto-text {
         padding-right: 30px;

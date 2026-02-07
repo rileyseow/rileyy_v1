@@ -1,6 +1,6 @@
 # rileyy's Portfolio Site
 
-SPA built in react-ts and hosted with Vercel.
+SPA built in `react-ts` and hosted with Vercel.
 
 I've been putting it off, but I need to do this at some point. Thanks for taking a look!
 

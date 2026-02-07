@@ -1,5 +1,4 @@
 .About {
-  padding-top: 30px;
   font-size: 18px;
   line-height: 1.8;
 
@@ -9,6 +8,10 @@
 
   > p:not(:first-child) {
     color: var(--text-color-secondary);
+  }
+
+  > p:last-child {
+    margin-bottom: 0;
   }
 
   p a.link {

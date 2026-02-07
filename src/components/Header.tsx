@@ -15,7 +15,7 @@ const Header = () => {
       <div className="buttons">
         <a
           href="https://github.com/rileyseow"
-          aria-label="GitHub"
+          title="GitHub"
           target="_blank"
           rel="noreferrer"
         >
@@ -23,7 +23,7 @@ const Header = () => {
         </a>
         <a
           href="https://linkedin.com/in/rileyseow"
-          aria-label="LinkedIn"
+          title="LinkedIn"
           target="_blank"
           rel="noreferrer"
         >
@@ -31,7 +31,7 @@ const Header = () => {
         </a>
         <a
           href="mailto:rileyy@alumni.stanford.edu"
-          aria-label="Email"
+          title="Email"
           target="_blank"
           rel="noreferrer"
         >
@@ -41,7 +41,6 @@ const Header = () => {
           className="resume"
           href="https://google.com"
           title="See my resume"
-          aria-label="Resume"
           target="_blank"
           rel="noreferrer"
         >

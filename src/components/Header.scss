@@ -1,15 +1,13 @@
-@use "../palette";
-
 .Header {
   position: sticky;
   top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
-  color: palette.$white;
-  background-color: palette.$cod-gray;
-  box-shadow: 0px 1px 3px var(--text-color-tertiary);
+  padding: 40px 80px;
+  z-index: 1;
+  background-color: var(--bg-color-primary);
+  box-shadow: 0px -0.5px 3px var(--text-color-tertiary);
 
   .logo {
     display: flex;
@@ -34,24 +32,20 @@
     align-items: center;
 
     &:hover > a {
-      &:hover {
-        color: palette.$silver;
-      }
-
       &:not(:hover) {
-        color: palette.$silver-chalice;
+        color: var(--text-color-tertiary);
       }
 
       &:active {
-        color: palette.$limeade;
+        color: var(--accent-color-primary);
       }
     }
 
     > a {
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
       padding: 5px 14px;
-      color: palette.$white;
+      color: var(--text-color-secondary);
     }
 
     > a.resume {
