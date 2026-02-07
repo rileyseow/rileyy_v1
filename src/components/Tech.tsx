@@ -25,7 +25,7 @@ const DEV_TOOLS: DevTool[] = [
   { name: "React", img: <ReactSvg /> },
   { name: "Redux", img: <ReduxSvg /> },
   { name: "HTML", img: <HtmlSvg /> },
-  { name: "CSS/SCSS", img: [<CssSvg />, <ScssSvg />] },
+  { name: "CSS/SCSS", img: [<CssSvg key="css" />, <ScssSvg key="scss" />] },
   { name: "D3.js", img: <D3Svg /> },
   { name: "Mapbox", img: <MapboxSvg /> },
   { name: "Node.js", img: <NodeSvg /> },
