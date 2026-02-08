@@ -1,0 +1,28 @@
+.Work {
+  display: grid;
+  grid-template: min-content min-content minmax(0, 380px) / 220px minmax(0, 1fr);
+  grid-template-areas:
+    "experience experience"
+    "shortcuts shortcuts"
+    "timeline card";
+  row-gap: 20px;
+  column-gap: 80px;
+
+  h2.section-title {
+    grid-area: experience;
+    margin-bottom: 0;
+  }
+
+  .Shortcuts {
+    grid-area: shortcuts;
+    margin-bottom: 30px;
+  }
+
+  .Timeline {
+    grid-area: timeline;
+  }
+
+  .ExperienceCard {
+    grid-area: card;
+  }
+}

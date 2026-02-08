@@ -15,7 +15,7 @@ const About = () => {
         I studied computer science via an interdisciplinary degree in
         <a
           className="link"
-          href="https://symsys.stanford.edu/"
+          href="https://symsys.stanford.edu"
           target="_blank"
           rel="noreferrer"
         >
@@ -31,7 +31,7 @@ const About = () => {
         Most recently, I’ve been a developer at the
         <a
           className="link"
-          href="https://www.cattlab.umd.edu/"
+          href="https://www.cattlab.umd.edu"
           target="_blank"
           rel="noreferrer"
         >

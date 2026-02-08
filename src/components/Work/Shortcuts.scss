@@ -1,0 +1,50 @@
+.Shortcuts {
+  display: grid;
+  grid-template: 1fr / repeat(4, minmax(0, 1fr));
+  gap: 20px;
+
+  &:hover > button {
+    &:not(:disabled):not(:hover) {
+      color: var(--text-color-tertiary);
+    }
+
+    &:not(:disabled):active {
+      color: var(--accent-color-primary);
+      border-color: var(--accent-color-primary);
+      box-shadow: 0.5px 0.5px 0.5px var(--text-color-tertiary);
+    }
+  }
+
+  &:has(> button:disabled:hover) {
+    > button:not(:disabled) {
+      color: var(--text-color-primary);
+    }
+  }
+
+  > button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border: 0.5px solid var(--text-color-tertiary);
+    border-radius: 8px;
+    font-family: var(--font-primary);
+    font-size: 16px;
+    color: var(--text-color-primary);
+    box-shadow: 0.5px 0.5px 0.5px var(--text-color-tertiary);
+    background: var(--bg-color-primary);
+    cursor: pointer;
+
+    &:disabled {
+      color: var(--accent-color-primary);
+      border-color: var(--accent-color-primary);
+      box-shadow: 0.5px 0.5px 0.5px var(--accent-color-primary);
+      opacity: 0.5;
+      cursor: default;
+    }
+
+    > svg {
+      height: 30px;
+    }
+  }
+}

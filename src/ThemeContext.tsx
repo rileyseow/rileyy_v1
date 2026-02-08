@@ -16,7 +16,7 @@ const ThemeContext = createContext<{
 } | null>(null);
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  const [theme, setTheme] = useState<Theme>("dark");
+  const [theme, setTheme] = useState<Theme>("light");
 
   // Detect user's system preference and local storage on initial load
   useEffect(() => {
