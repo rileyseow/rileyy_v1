@@ -82,3 +82,27 @@ export const EXPERIENCES: Experience[] = [
     ],
   },
 ] as const;
+
+interface AchievementLink {
+  id: Experience["id"];
+  text: string;
+  link: string;
+}
+
+export const ACHIEVEMENTS_LINKS: AchievementLink[] = [
+  {
+    id: "CATT",
+    text: "RITIS map",
+    link: "https://ritis.org/intro",
+  },
+  {
+    id: "LIT",
+    text: "Won an essay competition",
+    link: "https://ealc.stanford.edu/news/congratulations-riley-seow-first-place-humanities-category-gwiks",
+  },
+  {
+    id: "CESTA",
+    text: "Python web scraper",
+    link: "https://github.com/rileyseow/personhood-litguide-scraper",
+  },
+];

@@ -14,7 +14,7 @@
     gap: 16px;
     font-family: var(--font-secondary);
 
-    .title a.link {
+    .title > a.link {
       text-decoration: none;
       color: var(--accent-color-primary);
 
@@ -47,6 +47,18 @@
 
     > li:not(:last-child) {
       padding-bottom: 20px;
+    }
+
+    a.link {
+      color: var(--accent-color-primary);
+
+      &:hover {
+        opacity: 0.8;
+      }
+
+      &:active {
+        opacity: 0.6;
+      }
     }
   }
 }
