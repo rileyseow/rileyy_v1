@@ -1,18 +1,21 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import About from "./components/About";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Navigation from "./components/Navigation";
-import Projects from "./components/Projects";
-import Tech from "./components/Tech";
-import Work from "./components/Work";
+import About from './components/About';
+import Footer from './components/Footer';
+import Header from './components/Header';
+import Navigation from './components/Navigation';
+import Projects from './components/Projects';
+import Tech from './components/Tech';
+import Work from './components/Work';
 
-import "./App.scss";
+import './App.scss';
 
 const App = () => {
-  const [isHeaderVisible, setIsHeaderVisible] = useState<boolean>(true);
-  const [scrollY, setScrollY] = useState<Window["scrollY"]>(window.scrollY);
+  const [isHeaderVisible, setIsHeaderVisible] =
+    useState<boolean>(true);
+  const [scrollY, setScrollY] = useState<Window['scrollY']>(
+    window.scrollY
+  );
 
   useEffect(() => {
     // generic 'scroll' event captures button click scrolls, e.g. in navbar, which
@@ -22,34 +25,40 @@ const App = () => {
       setIsHeaderVisible(e.deltaY < 0);
       setScrollY(window.scrollY);
     };
-    window.addEventListener("wheel", handleWheel);
+    window.addEventListener('wheel', handleWheel);
     return () => {
-      window.removeEventListener("wheel", handleWheel);
+      window.removeEventListener('wheel', handleWheel);
     };
   });
 
   // use sessionStorage to keep track of `window.scrollY` to keep navbar state in sync
   useEffect(() => {
-    const storedScrollY = sessionStorage.getItem("scrollY");
+    const storedScrollY = sessionStorage.getItem('scrollY');
     if (storedScrollY) {
       setScrollY(parseInt(storedScrollY));
-      sessionStorage.removeItem("scrollY");
+      sessionStorage.removeItem('scrollY');
     }
 
     const saveScrollY = () => {
-      sessionStorage.setItem("scrollY", window.scrollY.toString());
+      sessionStorage.setItem(
+        'scrollY',
+        window.scrollY.toString()
+      );
     };
-    window.addEventListener("beforeunload", saveScrollY);
+    window.addEventListener('beforeunload', saveScrollY);
     return () => {
-      window.removeEventListener("beforeunload", saveScrollY);
+      window.removeEventListener(
+        'beforeunload',
+        saveScrollY
+      );
     };
   }, [setScrollY]);
 
   return (
-    <div className="App">
+    <div className='App'>
       <Header isHeaderVisible={isHeaderVisible} />
-      <div className="content">
-        <div className="left">
+      <div className='content'>
+        <div className='left'>
           <Navigation
             isHeaderVisible={isHeaderVisible}
             setIsHeaderVisible={setIsHeaderVisible}

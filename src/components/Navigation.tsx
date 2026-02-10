@@ -1,19 +1,24 @@
-import classNames from "classnames";
+import classNames from 'classnames';
 import {
   useCallback,
   useEffect,
   useState,
   type Dispatch,
   type SetStateAction,
-} from "react";
+} from 'react';
 
-import MoonSvg from "../assets/moon.svg?react";
-import SunSvg from "../assets/sun.svg?react";
-import { useTheme } from "../ThemeContext";
+import MoonSvg from '../assets/moon.svg?react';
+import SunSvg from '../assets/sun.svg?react';
+import { useTheme } from '../ThemeContext';
 
-import "./Navigation.scss";
+import './Navigation.scss';
 
-const SECTIONS = ["About", "Tech", "Work", "Projects"] as const;
+const SECTIONS = [
+  'About',
+  'Tech',
+  'Work',
+  'Projects',
+] as const;
 
 type Section = (typeof SECTIONS)[number];
 
@@ -22,7 +27,10 @@ type Section = (typeof SECTIONS)[number];
  * @description Map from page sections to their top `scrollY` values.
  * @note Ordered by top-to-bottom appearance on the page.
  */
-const SCROLL_Y_SECTION_BREAKPOINTS: Record<Section, number> = {
+const SCROLL_Y_SECTION_BREAKPOINTS: Record<
+  Section,
+  number
+> = {
   About: 160,
   Tech: 670,
   Work: 990,
@@ -47,29 +55,29 @@ const Navigation = ({
 }: {
   isHeaderVisible: boolean;
   setIsHeaderVisible: Dispatch<SetStateAction<boolean>>;
-  scrollY: Window["scrollY"];
+  scrollY: Window['scrollY'];
 }) => {
   const { theme, setTheme } = useTheme();
 
-  const [focusedSection, setFocusedSection] = useState<Section>("About");
+  const [focusedSection, setFocusedSection] =
+    useState<Section>('About');
 
   const handleDetectFocusedSection = useCallback(
-    (y: Window["scrollY"]) => {
-      const breakpoints = Object.entries(SCROLL_Y_SECTION_BREAKPOINTS) as [
-        Section,
-        number,
-      ][];
+    (y: Window['scrollY']) => {
+      const breakpoints = Object.entries(
+        SCROLL_Y_SECTION_BREAKPOINTS
+      ) as [Section, number][];
 
       let i = 0;
       while (
-        i + 1 < breakpoints.length &&
-        y > breakpoints[i + 1][1] - SCROLL_PADDING_BUFFER
+        i + 1 < breakpoints.length
+        && y > breakpoints[i + 1][1] - SCROLL_PADDING_BUFFER
       ) {
         i += 1;
       }
       setFocusedSection(breakpoints[i][0]);
     },
-    [setFocusedSection, scrollY],
+    [setFocusedSection, scrollY]
   );
 
   useEffect(() => {
@@ -80,7 +88,7 @@ const Navigation = ({
     setFocusedSection(section);
     window.scrollTo({
       top: SCROLL_Y_SECTION_BREAKPOINTS[section],
-      behavior: "smooth",
+      behavior: 'smooth',
     });
     if (isHeaderVisible) {
       setIsHeaderVisible(false);
@@ -88,12 +96,14 @@ const Navigation = ({
   };
 
   return (
-    <nav className="Navigation">
+    <nav className='Navigation'>
       <ul>
-        {SECTIONS.map((section) => (
-          <li key={section} className="nav-item">
+        {SECTIONS.map(section => (
+          <li key={section} className='nav-item'>
             <button
-              className={classNames({ focused: section === focusedSection })}
+              className={classNames({
+                focused: section === focusedSection,
+              })}
               onClick={() => handleClickNavItem(section)}
             >
               {section}
@@ -101,16 +111,20 @@ const Navigation = ({
           </li>
         ))}
       </ul>
-      <div className="light-dark-toggle">
-        <button onClick={() => setTheme("light")}>
+      <div className='light-dark-toggle'>
+        <button onClick={() => setTheme('light')}>
           <SunSvg
-            className={classNames("theme-icon", { on: theme === "light" })}
+            className={classNames('theme-icon', {
+              on: theme === 'light',
+            })}
           />
         </button>
         <span>/</span>
-        <button onClick={() => setTheme("dark")}>
+        <button onClick={() => setTheme('dark')}>
           <MoonSvg
-            className={classNames("theme-icon", { on: theme === "dark" })}
+            className={classNames('theme-icon', {
+              on: theme === 'dark',
+            })}
           />
         </button>
       </div>

@@ -1,10 +1,10 @@
-import "./Projects.scss";
+import './Projects.scss';
 
 const Projects = () => {
   return (
-    <section className="Projects">
+    <section className='Projects'>
       <h2>Projects</h2>
-      <p className="coming-soon-text">🚧 🔨</p>
+      <p className='coming-soon-text'>🚧 🔨</p>
     </section>
   );
 };

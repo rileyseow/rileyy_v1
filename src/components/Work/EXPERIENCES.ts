@@ -21,88 +21,91 @@ export interface Experience {
 
 export const EXPERIENCES: Experience[] = [
   {
-    id: "CATT",
-    longName: "Center for Advanced Transportation Technology",
-    role: "Software Engineer",
-    link: "https://www.cattlab.umd.edu",
-    durationDesc: "Oct 2023 - Nov 2025",
-    achievements: [
-      "Delivered client- and server-side contributions across three codebases: querying data from servers, databases, and external APIs, and implementing efficient processing pipelines.",
-      "Built high-performance algorithms to process and visualize live data across map layers (e.g. traffic incidents and events, nationwide cameras, dynamic signs, transit, probe speed), handling hundreds of thousands of feature points and geometries refreshed up to every 15 seconds.",
-      "Served as a key contributor to a multi-million-dollar revamp of the RITIS map, a real-time platform used by federal and state transportation agencies.",
-      "Mentored undergraduate and graduate student interns.",
-    ],
-  },
-  {
-    id: "LIT",
-    shortName: "?",
+    id: 'CATT',
     longName:
-      "Stanford University, Oxford University, George Washington University, Independent",
-    role: "Literature Student",
-    durationDesc: "Jun 2020 - Mar 2024",
+      'Center for Advanced Transportation Technology',
+    role: 'Software Engineer',
+    link: 'https://www.cattlab.umd.edu',
+    durationDesc: 'Oct 2023 - Nov 2025',
     achievements: [
-      "Added and completed a B.A. in Comparative Literature from Stanford.",
-      "Studied abroad and completed a tutorial in Korean Studies at Oxford University.",
-      "Won an essay competition at George Washington University and traveled to South Korea on a partially academic-funded trip for two months.",
-      "Worked as a competitive writing coach for high schoolers awarded in regional, national, and international competitions (Scholastic, YoungArts, Harvard Crimson Global Essay, etc).",
+      'Delivered client- and server-side contributions across three codebases: querying data from servers, databases, and external APIs, and implementing efficient processing pipelines.',
+      'Built high-performance algorithms to process and visualize live data across map layers (e.g. traffic incidents and events, nationwide cameras, dynamic signs, transit, probe speed), handling hundreds of thousands of feature points and geometries refreshed up to every 15 seconds.',
+      'Served as a key contributor to a multi-million-dollar revamp of the RITIS map, a real-time platform used by federal and state transportation agencies.',
+      'Mentored undergraduate and graduate student interns.',
     ],
   },
   {
-    id: "CESTA",
-    longName: "Stanford Center for Spatial and Textual Analysis",
-    role: "Technical Research Intern",
-    link: "https://cesta.stanford.edu",
-    durationDesc: "Jun 2020 - Aug 2020",
+    id: 'LIT',
+    shortName: '?',
+    longName:
+      'Stanford University, Oxford University, George Washington University, Independent',
+    role: 'Literature Student',
+    durationDesc: 'Jun 2020 - Mar 2024',
     achievements: [
-      "Built a Python web scraper to extract, clean, and categorize character data from Schmoop and LitCharts for a project exploring textual personhood in English classic novels.",
-      "Automated data transformation and export into structured CSV format for downstream use by the word-association modeling team.",
-      "Created scalable, reproducible data pipelines to enable subsequent NLP analysis and modeling.",
+      'Added and completed a B.A. in Comparative Literature from Stanford.',
+      'Studied abroad and completed a tutorial in Korean Studies at Oxford University.',
+      'Won an essay competition at George Washington University and traveled to South Korea on a partially academic-funded trip for two months.',
+      'Worked as a competitive writing coach for high schoolers awarded in regional, national, and international competitions (Scholastic, YoungArts, Harvard Crimson Global Essay, etc).',
     ],
   },
   {
-    id: "PDP",
-    longName: "Stanford Parallel Distributed Processing Lab",
-    role: "Research Assistant",
-    link: "https://web.stanford.edu/group/pdplab",
-    durationDesc: "Nov 2019 - Mar 2020",
+    id: 'CESTA',
+    longName:
+      'Stanford Center for Spatial and Textual Analysis',
+    role: 'Technical Research Intern',
+    link: 'https://cesta.stanford.edu',
+    durationDesc: 'Jun 2020 - Aug 2020',
     achievements: [
-      "Developed Javascript code for a web-based speed arithmetic task deployed on Amazon Mechanical Turk to collect behavioral psychology data at scale.",
-      "Collaborated with a PhD researcher to begin evaluating neural network training approaches on the collected dataset, supporting cognitive modeling efforts at the intersection of neuroscience and machine learning.",
+      'Built a Python web scraper to extract, clean, and categorize character data from Schmoop and LitCharts for a project exploring textual personhood in English classic novels.',
+      'Automated data transformation and export into structured CSV format for downstream use by the word-association modeling team.',
+      'Created scalable, reproducible data pipelines to enable subsequent NLP analysis and modeling.',
     ],
   },
   {
-    id: "BLAIR",
-    longName: "UCLA Blair Lab",
-    role: "Research Assistant",
-    link: "https://www.psych.ucla.edu/faculty-page/tadblair",
-    durationDesc: "Jun 2019 - Aug 2019",
+    id: 'PDP',
+    longName:
+      'Stanford Parallel Distributed Processing Lab',
+    role: 'Research Assistant',
+    link: 'https://web.stanford.edu/group/pdplab',
+    durationDesc: 'Nov 2019 - Mar 2020',
     achievements: [
-      "Helped develop an open-source GUI for analyzing in-vivo calcium imaging data collected using UCLA Miniscope technology.",
-      "Implemented high-performance data visualization algorithms in C# to render real-time neural activity, including max image projections, cell contour overlays, and calcium tracing graphs.",
+      'Developed Javascript code for a web-based speed arithmetic task deployed on Amazon Mechanical Turk to collect behavioral psychology data at scale.',
+      'Collaborated with a PhD researcher to begin evaluating neural network training approaches on the collected dataset, supporting cognitive modeling efforts at the intersection of neuroscience and machine learning.',
+    ],
+  },
+  {
+    id: 'BLAIR',
+    longName: 'UCLA Blair Lab',
+    role: 'Research Assistant',
+    link: 'https://www.psych.ucla.edu/faculty-page/tadblair',
+    durationDesc: 'Jun 2019 - Aug 2019',
+    achievements: [
+      'Helped develop an open-source GUI for analyzing in-vivo calcium imaging data collected using UCLA Miniscope technology.',
+      'Implemented high-performance data visualization algorithms in C# to render real-time neural activity, including max image projections, cell contour overlays, and calcium tracing graphs.',
     ],
   },
 ] as const;
 
 interface AchievementLink {
-  id: Experience["id"];
+  id: Experience['id'];
   text: string;
   link: string;
 }
 
 export const ACHIEVEMENTS_LINKS: AchievementLink[] = [
   {
-    id: "CATT",
-    text: "RITIS map",
-    link: "https://ritis.org/intro",
+    id: 'CATT',
+    text: 'RITIS map',
+    link: 'https://ritis.org/intro',
   },
   {
-    id: "LIT",
-    text: "Won an essay competition",
-    link: "https://ealc.stanford.edu/news/congratulations-riley-seow-first-place-humanities-category-gwiks",
+    id: 'LIT',
+    text: 'Won an essay competition',
+    link: 'https://ealc.stanford.edu/news/congratulations-riley-seow-first-place-humanities-category-gwiks',
   },
   {
-    id: "CESTA",
-    text: "Python web scraper",
-    link: "https://github.com/rileyseow/personhood-litguide-scraper",
+    id: 'CESTA',
+    text: 'Python web scraper',
+    link: 'https://github.com/rileyseow/personhood-litguide-scraper',
   },
 ];
