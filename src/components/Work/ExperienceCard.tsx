@@ -24,7 +24,7 @@ const ExperienceCard = ({ id }: { id: Experience["id"] }) => {
           const split = achievement.split(f.text, 2);
           return [
             split[0],
-            <a className="link" href={f.link} target="_blank" rel="noreferrer">
+            <a key={f.link} href={f.link} target="_blank" rel="noreferrer">
               {f.text}
             </a>,
             split[1],

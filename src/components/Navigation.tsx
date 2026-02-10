@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import { useState } from "react";
+import { useState, type Dispatch, type SetStateAction } from "react";
 
 import MoonSvg from "../assets/moon.svg?react";
 import SunSvg from "../assets/sun.svg?react";
@@ -9,11 +9,24 @@ import "./Navigation.scss";
 
 const SECTIONS = ["About", "Tech", "Work", "Projects"] as const;
 
-const Navigation = () => {
+const Navigation = ({
+  isHeaderVisible,
+  setIsHeaderVisible,
+}: {
+  isHeaderVisible: boolean;
+  setIsHeaderVisible: Dispatch<SetStateAction<boolean>>;
+}) => {
   const { theme, setTheme } = useTheme();
 
   const [focusedSection, setFocusedSection] =
     useState<(typeof SECTIONS)[number]>("About");
+
+  const handleClickNavItem = (section: (typeof SECTIONS)[number]) => {
+    setFocusedSection(section);
+    if (isHeaderVisible) {
+      setIsHeaderVisible(false);
+    }
+  };
 
   return (
     <nav className="Navigation">
@@ -23,7 +36,7 @@ const Navigation = () => {
             <a
               className={classNames({ focused: section === focusedSection })}
               href={`#${section}`}
-              onClick={() => setFocusedSection(section)}
+              onClick={() => handleClickNavItem(section)}
             >
               {section}
             </a>

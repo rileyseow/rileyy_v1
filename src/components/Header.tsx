@@ -1,3 +1,5 @@
+import classNames from "classnames";
+
 import EmailSvg from "../assets/email.svg?react";
 import FaviconSvg from "../assets/favicon.svg?react";
 import GithubSvg from "../assets/github.svg?react";
@@ -5,9 +7,9 @@ import LinkedinSvg from "../assets/linkedin.svg?react";
 
 import "./Header.scss";
 
-const Header = () => {
+const Header = ({ isHeaderVisible }: { isHeaderVisible: boolean }) => {
   return (
-    <header className="Header">
+    <header className={classNames("Header", { visible: isHeaderVisible })}>
       <div className="logo">
         <FaviconSvg />
         <h1>RILEY SEOW</h1>
