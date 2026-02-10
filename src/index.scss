@@ -1,4 +1,4 @@
-@use "palette";
+@use 'palette';
 
 :root {
   --bg-color-primary: #{palette.$white};
@@ -7,8 +7,8 @@
   --text-color-secondary: #{palette.$dove-gray};
   --text-color-tertiary: #{palette.$silver-chalice};
   --accent-color-primary: #{palette.$chateau-green};
-  --font-primary: "Fira Sans", monospace;
-  --font-secondary: "Fira Mono", monospace;
+  --font-primary: 'Fira Sans', monospace;
+  --font-secondary: 'Fira Mono', monospace;
 
   font-weight: 400;
   font-size: 16px;
@@ -20,7 +20,7 @@
   scroll-behavior: smooth;
 }
 
-[data-theme="dark"] {
+[data-theme='dark'] {
   --bg-color-primary: #{palette.$cod-gray};
   --bg-color-secondary: #{palette.$scorpion};
   --text-color-primary: #{palette.$seashell};
@@ -37,4 +37,11 @@ body {
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
+
+  button {
+    font-family: var(--font-primary);
+    font-size: 16px;
+    color: var(--text-color-primary);
+    cursor: pointer;
+  }
 }

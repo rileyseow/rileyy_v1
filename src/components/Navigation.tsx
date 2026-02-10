@@ -24,7 +24,7 @@ type Section = (typeof SECTIONS)[number];
 
 /**
  * @constant
- * @description Map from page sections to their top `scrollY` values.
+ * @description Map from page sections to their top-edge `scrollY` values.
  * @note Ordered by top-to-bottom appearance on the page.
  */
 const SCROLL_Y_SECTION_BREAKPOINTS: Record<
@@ -34,7 +34,7 @@ const SCROLL_Y_SECTION_BREAKPOINTS: Record<
   About: 160,
   Tech: 670,
   Work: 990,
-  Projects: 1400, // TODO: adjust after section is implemented
+  Projects: 1400, // TODO: may need adjustment after section is implemented
 };
 
 /**
@@ -62,6 +62,8 @@ const Navigation = ({
   const [focusedSection, setFocusedSection] =
     useState<Section>('About');
 
+  // use scroll position kept track of in App.tsx to detect
+  // which page section is currently in-focus
   const handleDetectFocusedSection = useCallback(
     (y: Window['scrollY']) => {
       const breakpoints = Object.entries(

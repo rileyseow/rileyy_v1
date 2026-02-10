@@ -1,4 +1,4 @@
-@use "../palette";
+@use '../palette';
 
 .Navigation {
   display: flex;
@@ -36,11 +36,7 @@
         border-radius: 8px;
         border: none;
         text-align: left;
-        font-family: var(--font-primary);
-        font-size: 16px;
-        color: var(--text-color-primary);
         background: none;
-        cursor: pointer;
 
         &.focused {
           background-color: var(--bg-color-secondary);

@@ -17,10 +17,12 @@ const App = () => {
     window.scrollY
   );
 
+  // set whether header is visible and scroll position on scroll
   useEffect(() => {
-    // generic 'scroll' event captures button click scrolls, e.g. in navbar, which
-    // causes header overlapping content. 'wheel' event fires before 'scroll' and
-    // only captures trackpad or mouse type scrolls.
+    // listen for 'wheel' over 'scroll'. 'scroll' event is generic and will
+    // captures button click scrolls (e.g. in navbar) which can make header
+    // overlap content. 'wheel' event fires before 'scroll' and only captures
+    // trackpad or mouse scrolls.
     const handleWheel = (e: WheelEvent) => {
       setIsHeaderVisible(e.deltaY < 0);
       setScrollY(window.scrollY);
@@ -31,7 +33,8 @@ const App = () => {
     };
   });
 
-  // use sessionStorage to keep track of `window.scrollY` to keep navbar state in sync
+  // use sessionStorage to keep track of `window.scrollY` and keep
+  // navbar state in sync on page refresh
   useEffect(() => {
     const storedScrollY = sessionStorage.getItem('scrollY');
     if (storedScrollY) {

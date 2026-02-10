@@ -19,20 +19,28 @@ const ExperienceCard = ({
     role,
     link,
     durationDesc,
-    achievements,
+    achievements: rawAchievements,
   } = EXPERIENCES.find(experience => experience.id === id)!;
 
-  let processedAchievements: ReactNode[] = achievements;
+  // replace text with link tags as specified by the `ACHIEVEMENTS_LINKS` array
+  let processedAchievements: ReactNode[] = rawAchievements;
+
   const linksToAdd = ACHIEVEMENTS_LINKS.filter(
     f => f.id === id
   );
 
   if (linksToAdd.length) {
-    processedAchievements = achievements.map(
+    processedAchievements = rawAchievements.map(
       achievement => {
         for (const f of linksToAdd) {
           if (achievement.includes(f.text)) {
+            // split raw achievement text into array of max 2 items using
+            // `f.text` as the delimiter. This should result in an array
+            // of exactly 2 items
             const split = achievement.split(f.text, 2);
+
+            // return the array with a replacement link for `f.text` spliced
+            // into the middle index
             return [
               split[0],
               <a
@@ -47,7 +55,7 @@ const ExperienceCard = ({
             ];
           }
         }
-        return achievement;
+        return achievement; // no links to replace text with were found
       }
     );
   }

@@ -48,17 +48,15 @@
     padding: 16px 0 20px 0;
     cursor: default;
 
-    .experience {
+    button.experience {
       display: flex;
       align-items: center;
       gap: 20px;
       padding: 0;
       text-align: left;
-      font-family: var(--font-primary);
-      color: var(--text-color-secondary);
+      font-size: 14px;
       border: none;
       background: none;
-      cursor: pointer;
 
       &.focused {
         transform: scale(1.2);

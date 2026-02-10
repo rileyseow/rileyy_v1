@@ -10,9 +10,43 @@ const MOTTOS = [
   'You’re strange because you are not yourself and that’s what keeps you hidden. -Unknown',
 ] as const;
 
-const Footer = () => {
+const ScrollingMotto = () => {
   const [mottoIdx, setMottoIdx] = useState<number>(0);
 
+  return (
+    <div className='ScrollingMotto'>
+      <div className='motto-text-container'>
+        <div
+          key={`${MOTTOS[mottoIdx]}-base`}
+          className='motto-text'
+        >
+          {MOTTOS[mottoIdx]}
+        </div>
+        {/* duplicate .motto-text with aria-hidden for infinite scroll effect */}
+        <div
+          key={`${MOTTOS[mottoIdx]}-duplicate`}
+          className='motto-text'
+          aria-hidden
+        >
+          {MOTTOS[mottoIdx]}
+        </div>
+      </div>
+      <button
+        className='next-motto-button'
+        onClick={() =>
+          setMottoIdx(
+            prevMottoIdx =>
+              (prevMottoIdx + 1) % MOTTOS.length
+          )
+        }
+      >
+        <ArrowsCrossedSvg />
+      </button>
+    </div>
+  );
+};
+
+const Footer = () => {
   return (
     <footer className='Footer'>
       <div className='text-attribution'>
@@ -23,35 +57,7 @@ const Footer = () => {
           via Google Fonts.
         </span>
       </div>
-      <div className='scrolling-motto'>
-        <div className='motto-text-container'>
-          <div
-            key={`${MOTTOS[mottoIdx]}-one`}
-            className='motto-text'
-          >
-            {MOTTOS[mottoIdx]}
-          </div>
-          {/* duplicate .motto-text with aria-hidden for infinite scroll effect */}
-          <div
-            key={`${MOTTOS[mottoIdx]}-two`}
-            className='motto-text'
-            aria-hidden
-          >
-            {MOTTOS[mottoIdx]}
-          </div>
-        </div>
-        <button
-          className='next-motto-button'
-          onClick={() =>
-            setMottoIdx(
-              prevMottoIdx =>
-                (prevMottoIdx + 1) % MOTTOS.length
-            )
-          }
-        >
-          <ArrowsCrossedSvg />
-        </button>
-      </div>
+      <ScrollingMotto />
     </footer>
   );
 };

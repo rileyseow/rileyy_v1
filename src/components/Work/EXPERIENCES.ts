@@ -1,5 +1,5 @@
 /**
- * @file Constants file for work experience descriptions and metadata.
+ * @file Constants file for work experience metadata and descriptions.
  */
 
 export interface Experience {
@@ -19,6 +19,10 @@ export interface Experience {
   achievements: string[];
 }
 
+/**
+ * @constant
+ * @description List of work experience entries as defined by the {@interface Experience}.
+ */
 export const EXPERIENCES: Experience[] = [
   {
     id: 'CATT',
@@ -92,6 +96,11 @@ interface AchievementLink {
   link: string;
 }
 
+/**
+ * @constant
+ * List of links to associate to text in {@var EXPERIENCES.achievements} above.
+ * Structured as defined by the {@interface AchievementLink}.
+ */
 export const ACHIEVEMENTS_LINKS: AchievementLink[] = [
   {
     id: 'CATT',
