@@ -13,7 +13,7 @@ const Work = () => {
   >(EXPERIENCES[0]["id"]);
 
   return (
-    <section className="Work" id="Work">
+    <section className="Work">
       <h2 className="section-title">Experience</h2>
       <Shortcuts
         selectedExperienceId={selectedExperienceId}

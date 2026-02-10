@@ -35,7 +35,7 @@ const DEV_TOOLS: DevTool[] = [
 
 const Tech = () => {
   return (
-    <section className="Tech" id="Tech">
+    <section className="Tech">
       <h2>Lately I've been working in</h2>
       <div className="tileset">
         {DEV_TOOLS.map(({ name, img }) => (

@@ -4,7 +4,7 @@ import "./About.scss";
 
 const About = () => {
   return (
-    <section className="About" id="About">
+    <section className="About">
       <p>Hi, this is Riley.</p>
       <p>
         I’m a frontend-focused software engineer with experience building

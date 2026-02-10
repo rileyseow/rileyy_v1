@@ -12,6 +12,7 @@ import "./App.scss";
 
 const App = () => {
   const [isHeaderVisible, setIsHeaderVisible] = useState<boolean>(true);
+  const [scrollY, setScrollY] = useState<Window["scrollY"]>(window.scrollY);
 
   useEffect(() => {
     // generic 'scroll' event captures button click scrolls, e.g. in navbar, which
@@ -19,12 +20,30 @@ const App = () => {
     // only captures trackpad or mouse type scrolls.
     const handleWheel = (e: WheelEvent) => {
       setIsHeaderVisible(e.deltaY < 0);
+      setScrollY(window.scrollY);
     };
     window.addEventListener("wheel", handleWheel);
     return () => {
       window.removeEventListener("wheel", handleWheel);
     };
   });
+
+  // use sessionStorage to keep track of `window.scrollY` to keep navbar state in sync
+  useEffect(() => {
+    const storedScrollY = sessionStorage.getItem("scrollY");
+    if (storedScrollY) {
+      setScrollY(parseInt(storedScrollY));
+      sessionStorage.removeItem("scrollY");
+    }
+
+    const saveScrollY = () => {
+      sessionStorage.setItem("scrollY", window.scrollY.toString());
+    };
+    window.addEventListener("beforeunload", saveScrollY);
+    return () => {
+      window.removeEventListener("beforeunload", saveScrollY);
+    };
+  }, [setScrollY]);
 
   return (
     <div className="App">
@@ -34,6 +53,7 @@ const App = () => {
           <Navigation
             isHeaderVisible={isHeaderVisible}
             setIsHeaderVisible={setIsHeaderVisible}
+            scrollY={scrollY}
           />
         </div>
         <About />
