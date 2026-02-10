@@ -7,6 +7,7 @@
   padding: 40px;
   box-shadow: 0.5px 0.5px 2px var(--text-color-tertiary);
   border-radius: 16px;
+  animation: fadeIn 0.5s ease;
 
   .metadata {
     display: flex;
@@ -60,5 +61,14 @@
         opacity: 0.6;
       }
     }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    translate: 0 -40px;
+  }
+  to {
+    translate: 0;
   }
 }

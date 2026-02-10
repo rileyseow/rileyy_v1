@@ -36,7 +36,7 @@ const ExperienceCard = ({ id }: { id: Experience["id"] }) => {
   }
 
   return (
-    <div className="ExperienceCard">
+    <div key={id} className="ExperienceCard">
       <div className="metadata">
         <span className="title">
           <span>{`${role} @ `}</span>
