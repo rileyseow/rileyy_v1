@@ -1,4 +1,4 @@
-import type { ReactNode } from 'react';
+import type { ReactNode, RefObject } from 'react';
 import CssSvg from '../assets/Tech/css.svg?react';
 import D3Svg from '../assets/Tech/d3.svg?react';
 import ExpressSvg from '../assets/Tech/express.svg?react';
@@ -36,9 +36,13 @@ const DEV_TOOLS: DevTool[] = [
   { name: 'PostgreSQL', img: <PostgreSqlSvg /> },
 ];
 
-const Tech = () => {
+const Tech = ({
+  ref,
+}: {
+  ref: RefObject<HTMLElement | null>;
+}) => {
   return (
-    <section className='Tech'>
+    <section className='Tech' id='Tech' ref={ref}>
       <h2>Lately I've been working in</h2>
       <div className='tileset'>
         {DEV_TOOLS.map(({ name, img }) => (

@@ -1,10 +1,16 @@
+import type { RefObject } from 'react';
+
 import ArrowUpRightSvg from '../assets/arrowUpRight.svg?react';
 
 import './About.scss';
 
-const About = () => {
+const About = ({
+  ref,
+}: {
+  ref: RefObject<HTMLElement | null>;
+}) => {
   return (
-    <section className='About'>
+    <section className='About' id='About' ref={ref}>
       <p>Hi, this is Riley.</p>
       <p>
         I’m a frontend-focused software engineer with

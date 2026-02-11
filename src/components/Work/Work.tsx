@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type RefObject } from 'react';
 
 import {
   type Experience,
@@ -10,12 +10,16 @@ import Timeline from './Timeline';
 
 import './Work.scss';
 
-const Work = () => {
+const Work = ({
+  ref,
+}: {
+  ref: RefObject<HTMLElement | null>;
+}) => {
   const [selectedExperienceId, setSelectedExperienceId] =
     useState<Experience['id']>(EXPERIENCES[0]['id']);
 
   return (
-    <section className='Work'>
+    <section className='Work' id='Work' ref={ref}>
       <h2 className='section-title'>Experience</h2>
       <Shortcuts
         selectedExperienceId={selectedExperienceId}

@@ -60,11 +60,13 @@
 
       > :not(.left) {
         padding: 0 6% 60px 6%;
+        scroll-margin-top: 40px;
       }
     }
   }
 
   .Navigation {
+    width: 100%;
     flex-direction: row;
     gap: 0;
 

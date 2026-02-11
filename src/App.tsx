@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import About from './components/About';
 import Footer from './components/Footer';
@@ -12,11 +12,13 @@ import './App.scss';
 import './media.scss'; // media query styles
 
 const App = () => {
+  const aboutRef = useRef<HTMLElement>(null);
+  const techRef = useRef<HTMLElement>(null);
+  const workRef = useRef<HTMLElement>(null);
+  const projectsRef = useRef<HTMLElement>(null);
+
   const [isHeaderVisible, setIsHeaderVisible] =
     useState<boolean>(true);
-  const [scrollY, setScrollY] = useState<Window['scrollY']>(
-    window.scrollY
-  );
 
   // set whether header is visible and scroll position on scroll
   useEffect(() => {
@@ -26,37 +28,12 @@ const App = () => {
     // trackpad or mouse scrolls.
     const handleWheel = (e: WheelEvent) => {
       setIsHeaderVisible(e.deltaY < 0);
-      setScrollY(window.scrollY);
     };
     window.addEventListener('wheel', handleWheel);
     return () => {
       window.removeEventListener('wheel', handleWheel);
     };
   });
-
-  // use sessionStorage to keep track of `window.scrollY` and keep
-  // navbar state in sync on page refresh
-  useEffect(() => {
-    const storedScrollY = sessionStorage.getItem('scrollY');
-    if (storedScrollY) {
-      setScrollY(parseInt(storedScrollY));
-      sessionStorage.removeItem('scrollY');
-    }
-
-    const saveScrollY = () => {
-      sessionStorage.setItem(
-        'scrollY',
-        window.scrollY.toString()
-      );
-    };
-    window.addEventListener('beforeunload', saveScrollY);
-    return () => {
-      window.removeEventListener(
-        'beforeunload',
-        saveScrollY
-      );
-    };
-  }, [setScrollY]);
 
   return (
     <div className='App'>
@@ -66,13 +43,18 @@ const App = () => {
           <Navigation
             isHeaderVisible={isHeaderVisible}
             setIsHeaderVisible={setIsHeaderVisible}
-            scrollY={scrollY}
+            sectionRefs={{
+              About: aboutRef,
+              Tech: techRef,
+              Work: workRef,
+              Projects: projectsRef,
+            }}
           />
         </div>
-        <About />
-        <Tech />
-        <Work />
-        <Projects />
+        <About ref={aboutRef} />
+        <Tech ref={techRef} />
+        <Work ref={workRef} />
+        <Projects ref={projectsRef} />
       </div>
       <Footer />
     </div>
