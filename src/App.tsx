@@ -9,6 +9,7 @@ import Tech from './components/Tech';
 import Work from './components/Work';
 
 import './App.scss';
+import './media.scss'; // media query styles
 
 const App = () => {
   const [isHeaderVisible, setIsHeaderVisible] =

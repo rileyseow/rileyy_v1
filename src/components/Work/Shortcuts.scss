@@ -1,6 +1,6 @@
 .Shortcuts {
   display: grid;
-  grid-template: 1fr / repeat(4, minmax(0, 1fr));
+  grid-template: 1fr / repeat(auto-fill, minmax(210px, 1fr));
   gap: 20px;
 
   &:hover > button {
@@ -29,6 +29,7 @@
     padding: 10px 20px;
     border: 0.5px solid var(--text-color-tertiary);
     border-radius: 8px;
+    white-space: nowrap;
     box-shadow: 0.5px 0.5px 0.5px var(--text-color-tertiary);
     background: var(--bg-color-primary);
 
@@ -42,6 +43,7 @@
     }
 
     > svg {
+      flex-shrink: 0;
       height: 30px;
     }
   }

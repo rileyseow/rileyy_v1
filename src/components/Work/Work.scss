@@ -1,10 +1,12 @@
 .Work {
   display: grid;
-  grid-template: min-content min-content minmax(0, 380px) / 220px minmax(0, 1fr);
+  grid-template:
+    repeat(3, min-content)
+    / minmax(min-content, 220px) minmax(0, 1fr);
   grid-template-areas:
-    "experience experience"
-    "shortcuts shortcuts"
-    "timeline card";
+    'experience experience'
+    'shortcuts shortcuts'
+    'timeline card';
   row-gap: 20px;
   column-gap: 80px;
 

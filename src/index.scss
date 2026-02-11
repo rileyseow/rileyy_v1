@@ -10,9 +10,6 @@
   --font-primary: 'Fira Sans', monospace;
   --font-secondary: 'Fira Mono', monospace;
 
-  font-weight: 400;
-  font-size: 16px;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -40,7 +37,7 @@ body {
 
   button {
     font-family: var(--font-primary);
-    font-size: 16px;
+    font-size: 1rem;
     color: var(--text-color-primary);
     cursor: pointer;
   }

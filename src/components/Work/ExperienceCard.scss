@@ -1,5 +1,5 @@
 .ExperienceCard {
-  width: 560px;
+  max-width: 800px;
   height: min-content;
   display: flex;
   flex-direction: column;
@@ -15,35 +15,39 @@
     gap: 16px;
     font-family: var(--font-secondary);
 
-    .title > a.link {
-      text-decoration: none;
-      color: var(--accent-color-primary);
+    .title {
+      font-size: 1.1rem;
 
-      &:hover {
-        text-decoration: underline;
-      }
+      > a.link {
+        text-decoration: none;
+        color: var(--accent-color-primary);
 
-      &:active {
-        opacity: 0.8;
-      }
+        &:hover {
+          text-decoration: underline;
+        }
 
-      svg {
-        width: 18px;
-        height: 18px;
-        vertical-align: middle;
-        padding-left: 2px;
+        &:active {
+          opacity: 0.8;
+        }
+
+        svg {
+          width: 18px;
+          height: 18px;
+          vertical-align: middle;
+          padding-left: 2px;
+        }
       }
     }
 
     .duration {
-      font-size: 14px;
+      font-size: 0.9rem;
     }
   }
 
   ul.achievements-desc {
     margin: 0;
     padding: 0 30px;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: var(--text-color-secondary);
 
     > li:not(:last-child) {

@@ -1,13 +1,13 @@
 .Timeline {
   display: flex;
-  font-size: 14px;
+  font-size: 0.9rem;
 
-  &:hover {
+  &:has(.experience:hover) {
     .timeline-ruler {
       background-color: var(--text-color-tertiary);
     }
 
-    .experience:hover {
+    .experience:not(.focused):hover {
       color: var(--text-color-secondary);
 
       .marker {
@@ -15,7 +15,7 @@
       }
     }
 
-    .experience:not(:hover) {
+    .experience:not(.focused):not(:hover) {
       color: var(--text-color-tertiary);
 
       .marker {
@@ -23,7 +23,7 @@
       }
     }
 
-    .experience:active {
+    .experience:not(.focused):active {
       color: var(--text-color-primary);
 
       .marker {
@@ -54,7 +54,7 @@
       gap: 20px;
       padding: 0;
       text-align: left;
-      font-size: 14px;
+      font-size: 0.9rem;
       border: none;
       background: none;
 

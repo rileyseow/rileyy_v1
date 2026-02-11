@@ -3,21 +3,20 @@
 
   .content {
     display: grid;
-    grid-template-columns: 240px minmax(0, 1fr);
+    grid-template-columns: 180px minmax(0, 1fr);
     align-items: start;
-    row-gap: 60px;
-    padding: 40px 80px;
+    gap: 60px;
+    padding: 3% 6%;
 
     h2 {
-      font-size: 22px;
+      font-size: 1.3rem;
       font-weight: 400;
     }
 
     > .left {
       grid-row: 1 / -1;
       position: sticky;
-      top: 200px;
-      display: flex;
+      top: 38%;
     }
 
     > :not(.left) {

@@ -44,7 +44,7 @@ const Tech = () => {
         {DEV_TOOLS.map(({ name, img }) => (
           <div className='tile' key={name}>
             {img}
-            {name}
+            <span className='name'>{name}</span>
           </div>
         ))}
       </div>
