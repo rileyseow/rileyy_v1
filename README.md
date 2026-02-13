@@ -9,7 +9,7 @@ SPA built in `react-ts` and hosted with Vercel at **\_**. Thanks for taking a lo
 - Work
 - Projects
 
-Includes links out to this GitHub and my LinkedIn, email, and resume.
+Includes links out to: this GitHub, my LinkedIn, my email, and a full resume.
 
 ## Palette
 

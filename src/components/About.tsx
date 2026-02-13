@@ -20,7 +20,7 @@ const About = ({
       </p>
       <p>
         I studied computer science via an interdisciplinary
-        degree in
+        B.S. degree in
         <a
           className='link'
           href='https://symsys.stanford.edu'
