@@ -49,7 +49,7 @@ const Header = ({
         </a>
         <a
           className='resume'
-          href='https://google.com'
+          href='/resume.pdf'
           title='See my resume'
           target='_blank'
           rel='noreferrer'
