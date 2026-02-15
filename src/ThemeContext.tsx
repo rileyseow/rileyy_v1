@@ -20,22 +20,10 @@ export const ThemeProvider = ({
 }: {
   children: ReactNode;
 }) => {
-  const [theme, setTheme] = useState<Theme>('light');
-
-  // Detect user's system preference and local storage on initial load
-  useEffect(() => {
-    const storedTheme = localStorage.getItem(
-      'theme'
-    ) as Theme | null;
-    const prefersDark = window.matchMedia(
-      '(prefers-color-scheme: dark)'
-    ).matches;
-    setTheme(
-      storedTheme || (prefersDark ? 'dark' : 'light')
-    );
-  }, []);
+  const [theme, setTheme] = useState<Theme>('dark');
 
   // Update the data-theme attribute on the document element whenever the theme changes
+  // Note: Theme setting on initial load is handled in `index.html`
   useEffect(() => {
     document.documentElement.setAttribute(
       'data-theme',

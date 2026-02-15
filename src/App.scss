@@ -7,10 +7,12 @@
     align-items: start;
     gap: 60px;
     padding: 3% 6%;
+    background-color: var(--bg-color-primary);
 
     h2 {
       font-size: 1.3rem;
       font-weight: 400;
+      color: var(--text-color-primary);
     }
 
     > .left {

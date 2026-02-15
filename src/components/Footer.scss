@@ -24,6 +24,7 @@
       display: flex;
       padding: 2px 8px;
       overflow: hidden;
+      color: var(--text-color-primary);
       background: color-mix(
         in hsl,
         var(--bg-color-secondary) 30%,

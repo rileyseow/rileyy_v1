@@ -6,6 +6,7 @@
       minmax(230px, 1fr)
     );
     gap: 20px;
+    color: var(--text-color-primary);
     cursor: default;
 
     &:has(.tile:hover) {
