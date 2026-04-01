@@ -7,7 +7,15 @@ import './Header.scss';
 const Header = () => {
   return (
     <header className='Header'>
-      <h1 className='site-title'>Riley Seow</h1>
+      <div
+        className='site-title'
+        onClick={() =>
+          window.scrollTo({ top: 0, behavior: 'smooth' })
+        }
+      >
+        <div className='pulsing-dot' />
+        <h1 className='title-text'>Riley Seow</h1>
+      </div>
       <div className='contact-btns'>
         <a
           href='https://github.com/rileyseow'
