@@ -50,10 +50,8 @@
     }
   }
 
-  .Footer {
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
+  .Footer > .ScrollingMotto {
+    display: none;
   }
 }
 
