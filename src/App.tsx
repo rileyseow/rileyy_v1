@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 
 import About from './components/About';
 import Footer from './components/Footer';
@@ -17,32 +17,12 @@ const App = () => {
   const workRef = useRef<HTMLElement>(null);
   const projectsRef = useRef<HTMLElement>(null);
 
-  const [isHeaderVisible, setIsHeaderVisible] =
-    useState<boolean>(true);
-
-  // set whether header is visible and scroll position on scroll
-  useEffect(() => {
-    // listen for 'wheel' over 'scroll'. 'scroll' event is generic and will
-    // captures button click scrolls (e.g. in navbar) which can make header
-    // overlap content. 'wheel' event fires before 'scroll' and only captures
-    // trackpad or mouse scrolls.
-    const handleWheel = (e: WheelEvent) => {
-      setIsHeaderVisible(e.deltaY < 0);
-    };
-    window.addEventListener('wheel', handleWheel);
-    return () => {
-      window.removeEventListener('wheel', handleWheel);
-    };
-  });
-
   return (
     <div className='App'>
-      <Header isHeaderVisible={isHeaderVisible} />
+      <Header />
       <div className='content'>
         <div className='left'>
           <Navigation
-            isHeaderVisible={isHeaderVisible}
-            setIsHeaderVisible={setIsHeaderVisible}
             sectionRefs={{
               About: aboutRef,
               Tech: techRef,

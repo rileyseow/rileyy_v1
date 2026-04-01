@@ -20,7 +20,7 @@ export const ThemeProvider = ({
 }: {
   children: ReactNode;
 }) => {
-  const [theme, setTheme] = useState<Theme>('dark');
+  const [theme, setTheme] = useState<Theme>('light');
 
   // Update the data-theme attribute on the document element whenever the theme changes
   // Note: Theme setting on initial load is handled in `index.html`

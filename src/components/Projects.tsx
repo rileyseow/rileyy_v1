@@ -9,7 +9,7 @@ const Projects = ({
 }) => {
   return (
     <section className='Projects' id='Projects' ref={ref}>
-      <h2>Projects</h2>
+      <h3>Projects</h3>
       <p className='coming-soon-text'>🚧 🔨</p>
     </section>
   );

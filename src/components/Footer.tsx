@@ -32,7 +32,7 @@ const ScrollingMotto = () => {
         </div>
       </div>
       <button
-        className='next-motto-button'
+        className='next-motto-btn'
         onClick={() =>
           setMottoIdx(
             prevMottoIdx =>
@@ -52,9 +52,7 @@ const Footer = () => {
       <div className='text-attribution'>
         <span>&#169; 2026 Riley Seow</span>
         <span>
-          Coded in VSCode with Typescript React. Deployed
-          with Vercel. Typeface is Fira Sans and Fira Mono
-          via Google Fonts.
+          Built with TypeScript, React · Deployed on Vercel
         </span>
       </div>
       <ScrollingMotto />

@@ -43,7 +43,7 @@ const Tech = ({
 }) => {
   return (
     <section className='Tech' id='Tech' ref={ref}>
-      <h2>Lately I've been working in</h2>
+      <h3>Lately I've been working in</h3>
       <div className='tileset'>
         {DEV_TOOLS.map(({ name, img }) => (
           <div className='tile' key={name}>

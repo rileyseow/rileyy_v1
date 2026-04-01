@@ -20,7 +20,7 @@ const Work = ({
 
   return (
     <section className='Work' id='Work' ref={ref}>
-      <h2 className='section-title'>Experience</h2>
+      <h3 className='section-title'>Experience</h3>
       <Shortcuts
         selectedExperienceId={selectedExperienceId}
         setSelectedExperienceId={setSelectedExperienceId}

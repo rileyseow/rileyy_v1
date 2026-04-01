@@ -1,6 +1,6 @@
 import type { ReactNode } from 'react';
 
-import ArrowUpRightSvg from '../../assets/arrowUpRight.svg?react';
+import ArrowSvg from '../../assets/arrow.svg?react';
 import {
   type Experience,
   ACHIEVEMENTS_LINKS,
@@ -73,7 +73,7 @@ const ExperienceCard = ({
               rel='noreferrer'
             >
               {longName}
-              <ArrowUpRightSvg />
+              <ArrowSvg />
             </a>
           : <span>{longName}</span>}
         </span>

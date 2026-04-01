@@ -1,38 +1,64 @@
 .About {
-  font-size: 1.1rem;
-  line-height: 1.8;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5;
   color: var(--text-color-primary);
 
-  > p:first-child {
+  > h2 {
+    margin: 0 0 16px 0;
     font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--text-color-primary);
   }
 
-  > p:not(:first-child) {
+  > p.description {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
     color: var(--text-color-secondary);
   }
 
-  > p:last-child {
-    margin-bottom: 0;
+  > p.previously-at {
+    margin: 0 0 24px 0;
+    font-size: 0.9rem;
+    color: var(--text-color-tertiary);
   }
 
-  p a.link {
-    margin: 0 6px;
-    text-decoration: none;
-    color: var(--accent-color-primary);
+  .action-btns {
+    display: flex;
+    gap: 12px;
 
-    &:hover {
-      text-decoration: underline;
+    > a,
+    button {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 16px;
+      border-radius: 8px;
+
+      > svg {
+        width: 14px;
+      }
     }
 
-    &:active {
-      opacity: 0.8;
+    > .resume-btn {
+      text-decoration: none;
+      color: var(--accent-color-primary);
+      border: 1px solid var(--accent-color-primary);
+
+      &:hover {
+        color: var(--accent-color-secondary);
+        background-color: var(--accent-color-primary);
+      }
     }
 
-    svg {
-      width: 18px;
-      height: 18px;
-      vertical-align: middle;
-      padding-left: 2px;
+    > .view-work-btn {
+      border: none;
+      color: var(--accent-color-primary);
+      background-color: var(--accent-color-secondary);
+
+      &:hover {
+        background-color: var(--accent-color-hover);
+      }
     }
   }
 }

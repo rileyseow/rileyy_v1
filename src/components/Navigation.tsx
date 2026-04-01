@@ -3,9 +3,7 @@ import {
   useCallback,
   useEffect,
   useState,
-  type Dispatch,
   type RefObject,
-  type SetStateAction,
 } from 'react';
 
 import MoonSvg from '../assets/moon.svg?react';
@@ -29,12 +27,8 @@ const SECTIONS = [
 type Section = (typeof SECTIONS)[number];
 
 const Navigation = ({
-  isHeaderVisible,
-  setIsHeaderVisible,
   sectionRefs,
 }: {
-  isHeaderVisible: boolean;
-  setIsHeaderVisible: Dispatch<SetStateAction<boolean>>;
   sectionRefs: Record<
     Section,
     RefObject<HTMLElement | null>
@@ -88,17 +82,8 @@ const Navigation = ({
 
       const ref = sectionRefs[section];
       ref.current?.scrollIntoView();
-
-      if (isHeaderVisible) {
-        setIsHeaderVisible(false);
-      }
     },
-    [
-      setFocusedSection,
-      sectionRefs,
-      isHeaderVisible,
-      setIsHeaderVisible,
-    ]
+    [setFocusedSection, sectionRefs]
   );
 
   return (

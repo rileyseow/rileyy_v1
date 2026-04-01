@@ -1,14 +1,15 @@
 @use 'palette';
 
 :root {
-  --bg-color-primary: #{palette.$white};
+  --bg-color-primary: #{palette.$cararra};
   --bg-color-secondary: #{palette.$gallery};
-  --text-color-primary: #{palette.$mine-shaft};
-  --text-color-secondary: #{palette.$dove-gray};
-  --text-color-tertiary: #{palette.$silver-chalice};
-  --accent-color-primary: #{palette.$chateau-green};
-  --font-primary: 'Fira Sans', monospace;
-  --font-secondary: 'Fira Mono', monospace;
+  --text-color-primary: #{palette.$cod-gray};
+  --text-color-secondary: #{palette.$oxford-blue};
+  --text-color-tertiary: #{palette.$pale-sky};
+  --accent-color-primary: #{palette.$heliotrope};
+  --accent-color-secondary: #{palette.$blue-chalk};
+  --accent-color-hover: #{palette.$fog};
+  --border-color-primary: #{palette.$catskill-white};
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -22,13 +23,19 @@
   --bg-color-secondary: #{palette.$scorpion};
   --text-color-primary: #{palette.$seashell};
   --text-color-secondary: #{palette.$silver};
-  --text-color-tertiary: #{palette.$silver-chalice};
-  --accent-color-primary: #{palette.$christi};
+  --text-color-tertiary: #{palette.$pale-sky};
+  --accent-color-primary: #{palette.$heliotrope};
+  --accent-color-secondary: #{palette.$blue-chalk};
+  --accent-color-hover: #{palette.$fog};
+  --border-color-primary: #{palette.$catskill-white};
 }
 
 body {
   margin: 0;
-  font-family: var(--font-primary);
+  font-family:
+    system-ui,
+    -apple-system,
+    sans-serif;
   background-color: var(--bg-color-primary);
   color: var(--text-color-primary);
   transition:
@@ -36,7 +43,6 @@ body {
     color 0.3s ease;
 
   button {
-    font-family: var(--font-primary);
     font-size: 1rem;
     color: var(--text-color-primary);
     cursor: pointer;

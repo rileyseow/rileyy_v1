@@ -1,6 +1,7 @@
 import type { RefObject } from 'react';
 
-import ArrowUpRightSvg from '../assets/arrowUpRight.svg?react';
+import ArrowSvg from '../assets/arrow.svg?react';
+import FileSvg from '../assets/file.svg?react';
 
 import './About.scss';
 
@@ -11,54 +12,34 @@ const About = ({
 }) => {
   return (
     <section className='About' id='About' ref={ref}>
-      <p>Hi, this is Riley.</p>
-      <p>
-        I’m a frontend-focused software engineer with
-        experience building data-intensive applications for
-        government transportation agencies, neuroscience
-        research labs, and elsewhere.
+      <h2>
+        I write software with an eye for clarity,
+        performance, and mission-driven impact.
+      </h2>
+      <p className='description'>
+        Full stack web developer with experience building
+        real-time, data-intensive platforms for universities
+        and government
       </p>
-      <p>
-        I studied computer science via an interdisciplinary
-        B.S. degree in
+      <p className='previously-at'>
+        Previously @ CATT Lab • Stanford Symbolic Systems
+      </p>
+      <div className='action-btns'>
         <a
-          className='link'
-          href='https://symsys.stanford.edu'
+          className='resume-btn'
+          href='/resume.pdf'
+          title='See my resume'
           target='_blank'
           rel='noreferrer'
         >
-          Symbolic Systems
-          <ArrowUpRightSvg />
+          <FileSvg />
+          Resume
         </a>
-        from Stanford. That background shapes how I approach
-        engineering: I love solving problems across domains
-        and ramping up on new tools. I care deeply about
-        building intuitive, scalable systems that focus on
-        technical depth, user clarity — and great
-        documentation.
-      </p>
-      <p>
-        Most recently, I’ve been a developer at the
-        <a
-          className='link'
-          href='https://www.cattlab.umd.edu'
-          target='_blank'
-          rel='noreferrer'
-        >
-          Center for Advanced Transportation Technology
-          (CATT) Laboratory
-          <ArrowUpRightSvg />
-        </a>
-        , where I worked with large geospatial datasets to
-        build real-time mapping software for federal and
-        state agencies.
-      </p>
-      <p>
-        I’m currently seeking a mission-driven role where I
-        can contribute as a thoughtful engineer, collaborate
-        across disciplines, and continue deepening my
-        technical skillset.
-      </p>
+        <button className='view-work-btn'>
+          View Work
+          <ArrowSvg />
+        </button>
+      </div>
     </section>
   );
 };

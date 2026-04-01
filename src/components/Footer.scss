@@ -3,15 +3,14 @@
   justify-content: space-between;
   align-items: center;
   gap: 60px;
-  padding: 3% 6%;
-  box-shadow: 0px 0.5px 3px var(--text-color-tertiary);
-  background-color: var(--bg-color-primary);
+  padding: 40px 24px;
+  border-top: 1px solid var(--border-color-primary);
 
   > .text-attribution {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    font-size: 0.9rem;
+    gap: 8px;
+    font-size: 0.8rem;
     color: var(--text-color-tertiary);
   }
 
@@ -30,7 +29,6 @@
         var(--bg-color-secondary) 30%,
         var(--text-color-primary) 5%
       );
-      font-family: var(--font-secondary);
 
       .motto-text {
         padding-right: 30px;
@@ -40,7 +38,7 @@
       }
     }
 
-    .next-motto-button {
+    .next-motto-btn {
       border: none;
       color: var(--text-color-secondary);
       background: none;
