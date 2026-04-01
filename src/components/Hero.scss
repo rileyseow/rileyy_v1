@@ -1,4 +1,4 @@
-.About {
+.Hero {
   display: flex;
   flex-direction: column;
   line-height: 1.5;
@@ -9,6 +9,23 @@
     font-size: 1.8rem;
     font-weight: 500;
     color: var(--text-color-primary);
+
+    > button.theme-toggle {
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+      margin-left: 4px;
+      border-radius: 8px;
+      border: none;
+      color: var(--text-color-secondary);
+      background: none;
+      transform: translateY(6%);
+
+      &:hover {
+        color: var(--accent-color-primary);
+        background-color: var(--accent-color-secondary);
+      }
+    }
   }
 
   > p.description {

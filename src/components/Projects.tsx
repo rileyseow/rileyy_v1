@@ -1,14 +1,8 @@
-import type { RefObject } from 'react';
-
 import './Projects.scss';
 
-const Projects = ({
-  ref,
-}: {
-  ref: RefObject<HTMLElement | null>;
-}) => {
+const Projects = () => {
   return (
-    <section className='Projects' id='Projects' ref={ref}>
+    <section className='Projects'>
       <h3>Projects</h3>
       <p className='coming-soon-text'>🚧 🔨</p>
     </section>

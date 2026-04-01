@@ -19,7 +19,7 @@ const Work = ({
     useState<Experience['id']>(EXPERIENCES[0]['id']);
 
   return (
-    <section className='Work' id='Work' ref={ref}>
+    <section className='Work' ref={ref}>
       <h3 className='section-title'>Experience</h3>
       <Shortcuts
         selectedExperienceId={selectedExperienceId}

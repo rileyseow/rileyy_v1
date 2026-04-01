@@ -1,20 +1,36 @@
-import type { RefObject } from 'react';
+import { useCallback, type RefObject } from 'react';
 
 import ArrowSvg from '../assets/arrow.svg?react';
+import EclipseSvg from '../assets/eclipse.svg?react';
 import FileSvg from '../assets/file.svg?react';
+import { useTheme } from '../ThemeContext';
 
-import './About.scss';
+import './Hero.scss';
 
-const About = ({
-  ref,
+const Hero = ({
+  workRef,
 }: {
-  ref: RefObject<HTMLElement | null>;
+  workRef: RefObject<HTMLElement | null>;
 }) => {
+  const { theme, setTheme } = useTheme();
+
+  const handleViewWorkClick = useCallback(() => {
+    workRef.current?.scrollIntoView();
+  }, [workRef]);
+
   return (
-    <section className='About' id='About' ref={ref}>
+    <section className='Hero'>
       <h2>
         I write software with an eye for clarity,
         performance, and mission-driven impact.
+        <button
+          className='theme-toggle'
+          onClick={() =>
+            setTheme(theme === 'light' ? 'dark' : 'light')
+          }
+        >
+          <EclipseSvg />
+        </button>
       </h2>
       <p className='description'>
         Full stack web developer with experience building
@@ -35,7 +51,10 @@ const About = ({
           <FileSvg />
           Resume
         </a>
-        <button className='view-work-btn'>
+        <button
+          className='view-work-btn'
+          onClick={handleViewWorkClick}
+        >
           View Work
           <ArrowSvg />
         </button>
@@ -44,4 +63,4 @@ const About = ({
   );
 };
 
-export default About;
+export default Hero;
