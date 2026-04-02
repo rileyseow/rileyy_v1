@@ -1,63 +1,27 @@
-@media (max-width: 1060px) {
-  .Work {
-    display: flex;
-    flex-direction: column;
-
-    .Shortcuts {
-      margin: 0;
-    }
-  }
-
-  .Timeline .experiences {
-    gap: 20px;
-
-    button.experience.focused {
-      transform: none;
-      font-weight: 500;
-    }
-  }
-}
-
-@media (max-width: 818px) {
-  .Tech {
-    .tileset {
-      grid-template-columns: repeat(auto-fill, 110px);
-
-      .tile {
-        justify-content: center;
-
-        > .name {
-          display: none;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 773px) {
-  .Shortcuts {
-    display: none;
-  }
-}
-
-@media (max-width: 700px) {
+@media (max-width: 1199px) {
   .App {
     .content {
-      display: flex;
-      flex-direction: column;
-      align-items: stretch;
-      gap: 0;
+      padding-right: 38%;
     }
-  }
-
-  .Footer > .ScrollingMotto {
-    display: none;
   }
 }
 
-@media (max-width: 460px) {
-  .Header {
-    flex-direction: column;
-    gap: 10px;
+@media (max-width: 991px) {
+  .App {
+    .content {
+      padding-right: 22%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .App {
+    .content {
+      padding-right: 40px;
+    }
+
+    .Footer > .ScrollingMotto {
+      display: none;
+    }
   }
 }

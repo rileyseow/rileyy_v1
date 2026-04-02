@@ -1,9 +1,9 @@
 import { useRef } from 'react';
 
+import Featured from './components/Featured';
 import Footer from './components/Footer';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Projects from './components/Projects';
 import Tech from './components/Tech';
 import Work from './components/Work';
 
@@ -18,9 +18,9 @@ const App = () => {
       <Header />
       <div className='content'>
         <Hero workRef={workRef} />
+        <Featured />
         <Tech />
         <Work ref={workRef} />
-        <Projects />
       </div>
       <Footer />
     </div>

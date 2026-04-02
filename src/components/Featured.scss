@@ -1,0 +1,40 @@
+.Featured {
+  padding: 16px;
+  border: 1px solid var(--accent-color-primary);
+  border-radius: 8px;
+
+  &:hover {
+    background-color: var(--accent-color-secondary);
+  }
+
+  > a {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-decoration: none;
+
+    > .work-title {
+      display: flex;
+      gap: 4px;
+
+      > h4 {
+        margin: 0;
+        font-weight: 500;
+        color: var(--accent-color-primary);
+      }
+
+      > svg.arrow-icon {
+        width: 14px;
+        color: var(--accent-color-primary);
+        rotate: -135deg;
+      }
+    }
+
+    > p.work-description {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: var(--text-color-secondary);
+    }
+  }
+}
