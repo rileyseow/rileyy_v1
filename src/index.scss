@@ -21,16 +21,16 @@
 }
 
 [data-theme='dark'] {
-  --bg-color-primary: #{palette.$cod-gray};
-  --bg-color-secondary: #{palette.$scorpion};
-  --text-color-primary: #{palette.$seashell};
-  --text-color-secondary: #{palette.$silver};
-  --text-color-secondary-bright: #{palette.$silver};
+  --bg-color-primary: #{palette.$woodsmoke};
+  --bg-color-secondary: #{palette.$shark};
+  --text-color-primary: #{palette.$athens-gray};
+  --text-color-secondary: #{palette.$gray-chateau};
+  --text-color-secondary-bright: #{palette.$loblolly};
   --text-color-tertiary: #{palette.$pale-sky};
-  --accent-color-primary: #{palette.$heliotrope};
-  --accent-color-secondary: #{palette.$blue-chalk};
-  --accent-color-hover: #{palette.$fog};
-  --border-color-primary: #{palette.$catskill-white};
+  --accent-color-primary: #{palette.$heliotrope-variant};
+  --accent-color-secondary: #{palette.$revolver};
+  --accent-color-hover: #{palette.$port-gore};
+  --border-color-primary: #{palette.$shark};
 }
 
 body {
