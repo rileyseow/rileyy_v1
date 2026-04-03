@@ -24,7 +24,7 @@ export interface Experience {
  * @description String tag surrounding chip text in `coreImpact`
  * and `achievements` fields.
  */
-export const CHIP_BREAK_TAG = '**';
+export const CHIP_BREAK_TAG = '``';
 
 /**
  * @constant
@@ -42,9 +42,9 @@ export const EXPERIENCES: Experience[] = [
     coreImpact:
       'Built map software for transportation operators with real-time global data.',
     achievements: [
-      '**100k+** features processed with **15s refresh** cycles',
-      'Core contributor to **RITIS** platform used by federal + state agencies',
-      'Improved **performance** + **system clarity** across critical pipelines',
+      `${CHIP_BREAK_TAG}100k+${CHIP_BREAK_TAG} features processed with ${CHIP_BREAK_TAG}15s refresh${CHIP_BREAK_TAG} cycles`,
+      `Core contributor to ${CHIP_BREAK_TAG}RITIS${CHIP_BREAK_TAG} platform used by federal + state agencies`,
+      `Improved ${CHIP_BREAK_TAG}performance${CHIP_BREAK_TAG} + ${CHIP_BREAK_TAG}system clarity${CHIP_BREAK_TAG} across critical pipelines`,
     ],
   },
   {
@@ -53,8 +53,7 @@ export const EXPERIENCES: Experience[] = [
     role: 'Literature Student',
     link: 'https://ealc.stanford.edu/news/congratulations-riley-seow-first-place-humanities-category-gwiks',
     durationDesc: '2020–2023',
-    coreImpact:
-      'Completed additional B.A. in Comparative Literature, studied Korean Studies at Oxford, won scholarship trip to Korea, worked as competitive writing coach and education consultant',
+    coreImpact: `Completed additional B.A. in ${CHIP_BREAK_TAG}Comparative Literature${CHIP_BREAK_TAG}, studied Korean Studies at ${CHIP_BREAK_TAG}Oxford${CHIP_BREAK_TAG}, won scholarship trip to Korea, worked as competitive writing coach and education consultant`,
   },
   {
     id: 'CESTA',
@@ -62,8 +61,7 @@ export const EXPERIENCES: Experience[] = [
     role: 'Technical Research Intern',
     link: 'https://github.com/rileyseow/personhood-litguide-scraper',
     durationDesc: '2020',
-    coreImpact:
-      'Built **Python** web scraper to extract, clean, and categorize character data in English classic novels, enabling downstream **NLP** modeling',
+    coreImpact: `Built ${CHIP_BREAK_TAG}Python${CHIP_BREAK_TAG} web scraper to extract, clean, and categorize character data in English classic novels, enabling downstream ${CHIP_BREAK_TAG}NLP${CHIP_BREAK_TAG} modeling`,
   },
   {
     id: 'PDP',
@@ -71,8 +69,7 @@ export const EXPERIENCES: Experience[] = [
     role: 'Research Assistant',
     link: 'https://web.stanford.edu/group/pdplab',
     durationDesc: '2019–2020',
-    coreImpact:
-      'Developed **JavaScript** code for large-scale data collection in behavioral psychology experiments',
+    coreImpact: `Developed ${CHIP_BREAK_TAG}JavaScript${CHIP_BREAK_TAG} code for large-scale data collection in behavioral psychology experiments`,
   },
   {
     id: 'BLAIR',
@@ -80,7 +77,6 @@ export const EXPERIENCES: Experience[] = [
     role: 'Research Assistant',
     link: 'https://www.psych.ucla.edu/faculty-page/tadblair',
     durationDesc: '2019',
-    coreImpact:
-      'Built **real-time** data visualization tools in **C#** to process in-vivo calcium brain imaging data',
+    coreImpact: `Built ${CHIP_BREAK_TAG}real-time${CHIP_BREAK_TAG} data visualization tools in ${CHIP_BREAK_TAG}C#${CHIP_BREAK_TAG} to process in-vivo calcium brain imaging data`,
   },
 ] as const;

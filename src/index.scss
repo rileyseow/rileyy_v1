@@ -2,9 +2,10 @@
 
 :root {
   --bg-color-primary: #{palette.$cararra};
-  --bg-color-secondary: #{palette.$gallery};
+  --bg-color-secondary: #{palette.$porcelain};
   --text-color-primary: #{palette.$cod-gray};
-  --text-color-secondary: #{palette.$oxford-blue};
+  --text-color-secondary: #{palette.$river-bed};
+  --text-color-secondary-bright: #{palette.$oxford-blue};
   --text-color-tertiary: #{palette.$pale-sky};
   --accent-color-primary: #{palette.$heliotrope};
   --accent-color-secondary: #{palette.$blue-chalk};
@@ -24,6 +25,7 @@
   --bg-color-secondary: #{palette.$scorpion};
   --text-color-primary: #{palette.$seashell};
   --text-color-secondary: #{palette.$silver};
+  --text-color-secondary-bright: #{palette.$silver};
   --text-color-tertiary: #{palette.$pale-sky};
   --accent-color-primary: #{palette.$heliotrope};
   --accent-color-secondary: #{palette.$blue-chalk};

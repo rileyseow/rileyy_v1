@@ -19,6 +19,16 @@
         color: var(--accent-color-primary);
       }
     }
+
+    .core-impact,
+    .achievements-list {
+      color: var(--text-color-primary);
+    }
+
+    .chip {
+      color: var(--accent-color-primary);
+      background-color: var(--accent-color-secondary);
+    }
   }
 
   &:has(.ExperienceCard > a:hover) {

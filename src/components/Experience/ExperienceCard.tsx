@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react';
+
 import ArrowSvg from '../../assets/arrow.svg?react';
 import {
   type Experience,
@@ -5,6 +7,19 @@ import {
 } from './EXPERIENCES';
 
 import './ExperienceCard.scss';
+
+const CHIP_REGEX = new RegExp(
+  `(${CHIP_BREAK_TAG}.*?${CHIP_BREAK_TAG})`
+);
+
+const addChips = (s: string): ReactNode =>
+  s.split(CHIP_REGEX).map(f =>
+    CHIP_REGEX.test(f) ?
+      <span key={f} className='chip'>
+        {f.replaceAll(CHIP_BREAK_TAG, '')}
+      </span>
+    : f
+  );
 
 const CardContent = ({
   organization,
@@ -22,11 +37,13 @@ const CardContent = ({
         <span className='duration'>{durationDesc}</span>
       </div>
       <span className='organization'>{organization}</span>
-      <span className='core-impact'>{coreImpact}</span>
+      <span className='core-impact'>
+        {addChips(coreImpact)}
+      </span>
       {achievements && (
         <ul className='achievements-list'>
           {achievements.map((achievement, i) => (
-            <li key={i}>• {achievement}</li>
+            <li key={i}>• {addChips(achievement)}</li>
           ))}
         </ul>
       )}
