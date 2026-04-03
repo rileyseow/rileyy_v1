@@ -1,16 +1,12 @@
 @media (max-width: 1199px) {
-  .App {
-    .content {
-      padding-right: 38%;
-    }
+  .App .content {
+    padding-right: 38%;
   }
 }
 
 @media (max-width: 991px) {
-  .App {
-    .content {
-      padding-right: 22%;
-    }
+  .App .content {
+    padding-right: 22%;
   }
 }
 
@@ -22,6 +18,21 @@
 
     .Footer > .ScrollingMotto {
       display: none;
+    }
+  }
+}
+
+@media (max-width: 479px) {
+  .Tech > .tech-category {
+    justify-content: space-between;
+
+    > ul.category-list {
+      flex-direction: column;
+      align-items: end;
+
+      > li:not(:last-child)::after {
+        display: none;
+      }
     }
   }
 }
