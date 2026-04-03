@@ -16,6 +16,7 @@
 
   > .ScrollingMotto {
     display: flex;
+    gap: 8px;
     align-items: center;
 
     .motto-text-container {
@@ -23,12 +24,8 @@
       display: flex;
       padding: 2px 8px;
       overflow: hidden;
-      color: var(--text-color-primary);
-      background: color-mix(
-        in hsl,
-        var(--bg-color-secondary) 30%,
-        var(--text-color-primary) 5%
-      );
+      color: var(--text-color-secondary);
+      background: var(--bg-color-secondary);
 
       .motto-text {
         padding-right: 30px;
@@ -39,17 +36,15 @@
     }
 
     .next-motto-btn {
+      padding: 8px;
+      border-radius: 8px;
       border: none;
-      color: var(--text-color-secondary);
       background: none;
-      cursor: pointer;
+      color: var(--text-color-secondary);
 
       &:hover {
-        color: var(--text-color-primary);
-      }
-
-      &:active {
         color: var(--accent-color-primary);
+        background-color: var(--accent-color-secondary);
       }
 
       svg {
