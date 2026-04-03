@@ -20,13 +20,13 @@ const Featured = () => {
           <ArrowSvg className='arrow-icon' />
         </div>
         <p className='work-description'>
-          Map software handling 100k+ real-time feature
-          points and geometries for federal and state
-          agencies to conduct transportation analysis and
-          monitoring. Implemented data visualization layers
-          with Mapbox and D3 and wrote efficient processing
-          pipelines in Node and Express, contributing across
-          front end and back end systems.
+          Map software handling 100k+ real-time features and
+          geometries for federal and state agencies to
+          conduct transportation analysis and monitoring.
+          Implemented data visualization with Mapbox and D3
+          and wrote efficient processing pipelines in Node
+          and Express, contributing across front and back
+          end systems.
         </p>
       </a>
     </section>

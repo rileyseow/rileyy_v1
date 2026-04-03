@@ -42,8 +42,9 @@ export const EXPERIENCES: Experience[] = [
     coreImpact:
       'Built map software for transportation operators with real-time global data.',
     achievements: [
-      `${CHIP_BREAK_TAG}100k+${CHIP_BREAK_TAG} features processed with ${CHIP_BREAK_TAG}15s refresh${CHIP_BREAK_TAG} cycles`,
-      `Core contributor to ${CHIP_BREAK_TAG}RITIS${CHIP_BREAK_TAG} platform used by federal + state agencies`,
+      `Handled ${CHIP_BREAK_TAG}100k+${CHIP_BREAK_TAG} features processed with ${CHIP_BREAK_TAG}15s refresh${CHIP_BREAK_TAG} cycles`,
+      `Implemented core functionality in ${CHIP_BREAK_TAG}RITIS${CHIP_BREAK_TAG} platform used by federal + state agencies`,
+      `Contributed ${CHIP_BREAK_TAG}full stack${CHIP_BREAK_TAG} across ${CHIP_BREAK_TAG}3${CHIP_BREAK_TAG} repositories`,
       `Improved ${CHIP_BREAK_TAG}performance${CHIP_BREAK_TAG} + ${CHIP_BREAK_TAG}system clarity${CHIP_BREAK_TAG} across critical pipelines`,
     ],
   },
@@ -77,6 +78,6 @@ export const EXPERIENCES: Experience[] = [
     role: 'Research Assistant',
     link: 'https://www.psych.ucla.edu/faculty-page/tadblair',
     durationDesc: '2019',
-    coreImpact: `Built ${CHIP_BREAK_TAG}real-time${CHIP_BREAK_TAG} data visualization tools in ${CHIP_BREAK_TAG}C#${CHIP_BREAK_TAG} to process in-vivo calcium brain imaging data`,
+    coreImpact: `Built ${CHIP_BREAK_TAG}real-time${CHIP_BREAK_TAG} visualization tools in ${CHIP_BREAK_TAG}C#${CHIP_BREAK_TAG} for an ${CHIP_BREAK_TAG}open source${CHIP_BREAK_TAG} ${CHIP_BREAK_TAG}GUI${CHIP_BREAK_TAG} to handle in-vivo calcium brain imaging data`,
   },
 ] as const;

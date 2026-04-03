@@ -34,8 +34,8 @@ const Hero = ({
       </h2>
       <p className='description'>
         Full stack web developer with experience building
-        real-time, data-intensive platforms for universities
-        and government
+        real-time, data-intensive applications for
+        universities and government
       </p>
       <p className='previously-at'>
         Previously @ CATT Lab • Stanford Symbolic Systems
