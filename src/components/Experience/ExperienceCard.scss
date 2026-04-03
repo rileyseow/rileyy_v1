@@ -1,0 +1,56 @@
+.ExperienceCard {
+  a {
+    text-decoration: none;
+    color: var(--text-color-primary);
+  }
+
+  .CardContent {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+
+    > :last-child {
+      padding-bottom: 24px;
+    }
+
+    > .header {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 4px;
+      font-weight: 500;
+
+      svg.arrow-icon {
+        width: 14px;
+        rotate: -135deg;
+      }
+
+      .duration {
+        flex-grow: 1;
+        text-align: right;
+        color: var(--text-color-tertiary);
+      }
+    }
+
+    > .organization {
+      margin-bottom: 8px;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      color: var(--text-color-tertiary);
+    }
+
+    > .core-impact {
+      color: var(--text-color-secondary);
+    }
+
+    > .achievements-list {
+      margin-bottom: 0;
+      padding: 0;
+      list-style-type: none;
+      color: var(--text-color-secondary);
+
+      > li {
+        margin-bottom: 4px;
+      }
+    }
+  }
+}

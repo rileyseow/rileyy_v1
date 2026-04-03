@@ -1,0 +1,38 @@
+.Experience {
+  display: flex;
+  flex-direction: column;
+
+  > h3.section-title {
+    padding-bottom: 16px;
+  }
+
+  > :nth-child(1 of .ExperienceCard) {
+    margin-bottom: 24px;
+    padding-left: 16px;
+    border-left: 2px solid var(--accent-color-primary);
+
+    .header {
+      font-size: 1rem;
+
+      svg,
+      span {
+        color: var(--accent-color-primary);
+      }
+    }
+  }
+
+  &:has(.ExperienceCard > a:hover) {
+    > .ExperienceCard:not(:has(> a:hover)) {
+      opacity: 0.6;
+    }
+
+    > .ExperienceCard:has(> a:hover) {
+      opacity: 1;
+
+      .CardContent .header span,
+      .CardContent .header svg {
+        color: var(--accent-color-primary);
+      }
+    }
+  }
+}

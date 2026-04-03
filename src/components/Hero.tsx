@@ -8,15 +8,15 @@ import { useTheme } from '../ThemeContext';
 import './Hero.scss';
 
 const Hero = ({
-  workRef,
+  experienceRef,
 }: {
-  workRef: RefObject<HTMLElement | null>;
+  experienceRef: RefObject<HTMLElement | null>;
 }) => {
   const { theme, setTheme } = useTheme();
 
   const handleViewWorkClick = useCallback(() => {
-    workRef.current?.scrollIntoView();
-  }, [workRef]);
+    experienceRef.current?.scrollIntoView();
+  }, [experienceRef]);
 
   return (
     <section className='Hero'>
